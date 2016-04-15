@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>FM-Rpsoft - If the world have to lose something, anything can be lose, only music is everlasting.</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+	<script src="js/menu.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/menu.css" />
+  
+</head>
+
+<body>
+  <img src="http://fm.rpsofts.com/img/bgimg.jpg" width="auto" height="100%" style="z-index:-100;position:absolute;right:0;top:0"> 
+<aside class="fixed-control-buttons">
+    <div id="botCloseAll" title="主页"><img src="img/home.png" height="65" width="65" alt="主页"></div>
+    <div id="botDemo" title="切换电台"><img src="img/1.png" height="65" width="65" alt="切换电台"></div>
+    <div class="fa-button next-button"><i class="fa fa-chevron-right" title="Next"></i></div>	
+</aside>
+  
+<main id="main" class="main content">
+    <div class="audio-player">
+
+        <div class="audio-album paused">
+            <img src="img/album.jpg" alt="default-album">
+            <div class="center-control-buttons"><i class="fa fa-play"></i></div>
+        </div>
+
+        <div class="audio-progress">
+            <div class="current"></div>
+        </div>
+    </div>
+
+    <div class="audio-info">
+        <div class="title">音乐标题</div>
+        <div class="artist">歌手</div>
+
+    </div>
+
+    <audio id="audio" src=""></audio>
+</main>
+
+<script type="text/javascript">   
+     $("#botCloseAll").click(function() {
+        CloseMetroMenu()
+    });
+    $("#botDemo").click(function() {
+        $.MetroMenu({
+            backicon: "images/back.png",
+           color1: "#6629d1",
+            color2: "#008d8b",
+            withtooltip: true,
+            closeonclick: true,
+            escclose: true,
+			animation: "botbounceInRight",
+            position: "Right",
+            items: [{
+                name: "推荐音乐",
+                icon: "images/excel.png",
+                link: "http://fm.rpsofts.com"
+            },
+			{
+                name: "国外经典",
+                icon: "images/gmail.png",
+                link: "http://fm.rpsofts.com"
+            },
+            {
+                name: "随机播放",
+                icon: "images/outlook.png",
+                link: "ran.html"
+               },
+				{
+                name: "Log Out",
+                icon: "images/shut-down.png"
+            }]
+        })
+    });
+</script>
+  <script type='text/javascript'>
+    (function(m, ei, q, i, a, j, s) {
+        m[a] = m[a] || function() {
+            (m[a].a = m[a].a || []).push(arguments)
+        };
+        j = ei.createElement(q),
+            s = ei.getElementsByTagName(q)[0];
+        j.async = true;
+        j.charset = 'UTF-8';
+        j.src = i + '?v=' + new Date().getUTCDate();
+        s.parentNode.insertBefore(j, s);
+    })(window, document, 'script', '//eco-api.meiqia.com/dist/meiqia.js', '_MEIQIA');
+    _MEIQIA('entId', 8914);
+</script>
+</body>
+</html>
