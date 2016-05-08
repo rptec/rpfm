@@ -15,7 +15,7 @@ $(document).ready(function(){
         var that = $(this);
 
         if ( that.hasClass('fa-home') ) {
-            window.open( 'https://www.72blog.com' );  //set your HOMEPAGE
+            window.open( 'http://www.72blog.com' );  //set your HOMEPAGE
         } else if ( that.hasClass('fa-chevron-right') ) {
             audio[0].pause();
             loadMusic();
